@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Django Tutorial | CONTACT
+{% endblock title %}
+
+
+{% block body %}
+
+{% comment %} head {% endcomment %}
+<h1 class="text-center my-5">CONTACT US</h1>
+
+{% comment %} form {% endcomment %}
+<div class="container">
+    <form method="POST" action="/contact">
+      {% csrf_token %}
+        <div class="form-group mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" placeholder="Enter Name" id="name" name="name">
+          </div>
+    
+          <div class="form-group mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" placeholder="Enter Email" id="email" name="email" aria-describedby="emailHelp">
+        </div>
+    
+        <div class="form-group mb-3">
+            <label for="phone" class="form-label">Contact Number</label>
+            <input type="phone" class="form-control" placeholder="Enter Contact Number" id="phone" name="phone" >
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="comment" class="form-label">Comment</label>
+            <textarea class="form-control" id="textarea" name="comment" rows="3"></textarea>
+          </div>
+
+        <button type="submit" class="mb-5 btn btn-primary">Submit</button>
+      </form>    
+</div>
+
+{% endblock body %}
+
+
+

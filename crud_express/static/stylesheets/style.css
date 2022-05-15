@@ -1,0 +1,10 @@
+.main-div{
+    background-image: url('../assets/images/1.jpg');
+    }
+    
+    .header{
+        color: white;
+        width: max-content;
+        border-radius: 20px;
+        padding: 20px 100px;
+    }

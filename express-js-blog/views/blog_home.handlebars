@@ -1,0 +1,10 @@
+<div class="container">
+    <h2 class="text-center m-4">Blogs</h2>
+    {{#each blogs}}
+    <a href="/blogpost/{{this.id}}">
+    <div class="alert alert-primary mt-2" role="alert">
+        {{this.title}}
+    </div>
+    </a>
+    {{/each}}
+</div>
